@@ -6,12 +6,12 @@ diameter = input(prompt);
 volume = ((4/3) * (pi) * (diameter/2)^3)/2;
 surfaceArea = 3 * (pi) * (diameter/2)^2;
 
+
 copperDensity = 8960;
 
-copperMass = copperDensity/volume;
-disp(copperMass);
+copperMass = copperDensity*volume;
 goldMass = surfaceArea * 0.0185; 
-disp(goldMass);
+
 
 totalMass = copperMass + goldMass;
 % calculate cost 
