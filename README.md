@@ -12,3 +12,7 @@ don't hesitate to contact me.
 This repo is strictly for storage of my own personal assignments. I am not
 responsible any honor code violations in the case of someone trying to pass off
 my work as their own. 
+
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
+
