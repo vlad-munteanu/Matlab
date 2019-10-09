@@ -18,16 +18,14 @@ xlabel('Time spent on phone in class (Mintutes)');
 ylabel('Grades for that day?s assignment or activity');
 
 %calculate equation 
-coefficients = polyfit(x,y,1);
-disp(equation);
+slope = polyfit(x,y,1);
 
 %Create line from coefficients
 xFit = linspace(0, 55);
-disp(xFit);
-yFit = polyval(coefficients, xFit);
+yFit = polyval(slope, xFit);
 
 hold on;
 %Plot red line
 plot(xFit, yFit,'color','red', 'LineWidth', 1);
 
-
+fprintf("Equation is: Grade = %f * PhoneTime + %f \n", slope(1), slope(2));
