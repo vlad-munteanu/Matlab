@@ -1,3 +1,8 @@
+%{ 
+Clears console before program runs because 
+having to manually clear the screen annoys me. 
+%} 
+clc;
 
 %Output to user using disp
 disp("This program outputs the solution to 22/7 in several ways"); 
