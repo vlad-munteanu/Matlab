@@ -78,45 +78,8 @@ rightP = [];
 lms = []; 
 rms = []; 
 
-
-close all;
-%%
-figure 
-hold on
-plot (leftP)
-plot (centerP)
-plot(rightP)
-plot([1 length(leftP)],[3 1],'k')
-legend('left sensor','center sensor','right sensor')
-grid
-hold off
-%%
-figure
-hold on
-plot(normalize(lms),'b')
-plot(normalize(rms),'r')
-plot(normalize(leftP),'k')
-legend('left speed','right speed','left sensor')
-hold off
-%%
-figure
-hold on
-plot(lms-rms,'b')
-%plot(normalize(rms),'r')
-legend('left speed','right speed')
-hold off
-%%
-figure
-hold on
-plot(leftP,'b')
-plot(righP,'r')
-plot([1 length(leftP)],[Thresh Thresh],'--k')
-hold off
-legend('left sensor','right sensor')
-%%
-correlate
-
 while (left >= 3) || (center >= 3) || (right >= 3)
+    
     % tuns turns left
    if right < 1
        disp("turning left");
@@ -143,14 +106,13 @@ while (left >= 3) || (center >= 3) || (right >= 3)
    right = a.analogRead(RIGHT_SENSOR_PIN);% read right
    
    leftP = [leftP left]; 
-   righP = [rightP right]; 
+   rightP = [rightP right]; 
    centerP = [centerP center]; 
    
    lms = [lms lmHigh]; 
    rms = [rms rmHigh]; 
-   
-   
 end
+
 
 
 
